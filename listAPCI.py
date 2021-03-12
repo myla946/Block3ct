@@ -7,6 +7,7 @@ programe goals:
 5. put all action in a while loop
 6.add exit option
 """
+import random
 myList = []
 
 def mainProgram():
@@ -14,12 +15,17 @@ def mainProgram():
     while True:
         print("Hello, there! Let's work with lists!")
         print("Please choose from following options.  type the number of the choise")
-        choise = input("1. Add to a list,  2. Return a value in a list    ")
+        choise = input("""1. Add to a list,
+2. Return a value in a list,
+3. random search,
+4. quit     """)
         if choise == "1":
             addTolist()
         elif choise == "2":
             indexValues
         elif choise == "3":
+            randomSearch()
+        else:
             break
 def addToLIst():
     print("Adding to a list! Great choise!")
@@ -27,6 +33,10 @@ def addToLIst():
     myList.append(int(newItem))
     #we need to think about errors!
 
+
+def randomSearch():
+    print("Why doyou chosie this ")
+    print(myList[random.randit(0, len(myList)-1)]
 
 def indexValues():
     print("At what index position do you want to search?")
