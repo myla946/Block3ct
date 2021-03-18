@@ -17,14 +17,20 @@ def mainProgram():
         print("Please choose from following options.  type the number of the choise")
         choise = input("""1. Add to a list,
 2. Return a value in a list,
-3. random search,
-4. quit     """)
+3. Add a bunch
+4. random search,
+5. print list
+6. quit     """)
         if choise == "1":
             addTolist()
         elif choise == "2":
             indexValues
         elif choise == "3":
-            randomSearch()
+            addAbunch
+        elif choise == "4":
+            randomeSearch()
+        elif choise == "5":
+            print(myList)
         else:
             break
 def addToLIst():
@@ -33,14 +39,23 @@ def addToLIst():
     myList.append(int(newItem))
     #we need to think about errors!
 
+def addAbunch():
+    print("We're gonna add a bunch of numbers to your list!")
+    numToAdd = input(" How many new inegers would you like to add?   ")
+    numRange = input("And how high would you like these numbers to go?    ")
+    for x in range(0, int(numToAdd)):
+        myList.append(random.randit(0,int(numRange)))
+    print("Your list is complete!")
+                
 
 def randomSearch():
     print("Why doyou chosie this ")
-    print(myList[random.randit(0, len(myList)-1)]
+    print(myList[random.randit(0, len(myList)-1)])
+        
 
 def indexValues():
     print("At what index position do you want to search?")
-    indexPos = input("Type an index postion here:      ")
+    indexPos = input("Type an index postion here:     ")
     print(myList[int(indexPos)])
 
 if __name__== "__main__":
