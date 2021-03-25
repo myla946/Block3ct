@@ -34,7 +34,7 @@ def mainProgram():
               linerSearch()
         elif choise == "6":
            sortList(myList)
-        elif choise == "6":
+        elif choise == "7":
             printLists()
         else:
             break
