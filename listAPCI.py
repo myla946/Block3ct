@@ -7,6 +7,7 @@ programe goals:
 """
 import random
 myList = []
+uniqu_list = []
 
 def mainProgram():
 #build our while loop
@@ -16,10 +17,11 @@ def mainProgram():
         choise = input("""1. Add to a list,
 2. Return a value in a list,
 3. Add a bunch
-4. random search,
+4. Random search,
 5. Liner search
-6. print list
-7. quit     """)
+6. Sort list
+7. print list
+8. Quit """)
         if choise == "1":
             addTolist()
         elif choise == "2":
@@ -31,10 +33,12 @@ def mainProgram():
         elif choise == "5":
               linerSearch()
         elif choise == "6":
-            print(myList)
+           sortList(myList)
+        elif choise == "6":
+            printLists()
         else:
             break
-def addToLIst():
+def addToList():
     print("Adding to a list! Great choise!")
     newItem = input("Type an interger here!    ")
     myList.append(int(newItem))
@@ -47,6 +51,17 @@ def addAbunch():
     for x in range(0, int(numToAdd)):
         myList.append(random.randint(0,int(numRange)))
     print("Your list is complete!")
+
+def sortLists(myList):
+    #"myList" is the ARGUMENT this function takes.
+    for x in myList:
+        if x not in unique_list:
+            unque_list.append(x)
+    unique_list.sort()
+    showMe = input("Wanna see your new, sorted list?    Y/N")
+    if showMe.lower() =="y":
+        print(unique_list)
+    
                 
 
 def randomSearch():
@@ -65,6 +80,15 @@ def indexValues():
     print("At what index position do you want to search?")
     indexPos = input("Type an index postion here:     ")
     print(myList[int(indexPos)])
+
+def printLists():
+    if len(unique_list) == 0:
+        print(myList)
+    else:
+        wichOne = input("Wich list do you want to see? Sorted or un-sorted?  ")
+        if wichOne.lower() == "sorted":
+            print(unique_list)
+
 
 if __name__== "__main__":
     mainProgram()
