@@ -66,7 +66,15 @@ def sortLists(myList):
     if showMe.lower() =="y":
         print(unique_list)
     
-                
+def newRandom():
+    if len(unique_list) > 0:
+        wichOne = input("Wich list do you want to search? Sorted or un-sorted?      ")
+        if whichOne.lower() == "sorted":
+            print(unique_list[random.randit(0, len(unique_list)-1)])
+        else:
+            print(myList[random.randit(0, len(myList)-1)])
+    else:
+        print(myList[random.randit(0, len(myList)-1)])
 
 def randomSearch():
     print("Why doyou chosie this ")
