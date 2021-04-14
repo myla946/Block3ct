@@ -22,7 +22,8 @@ def mainProgram():
 6. Sort list
 7. print list
 8. recursive binary search
-9. Quit """)
+9. new Random
+10.Quit """)
         if choise == "1":
             addTolist()
         elif choise == "2":
@@ -40,8 +41,10 @@ def mainProgram():
         elif choise == "8":
             searchItem = input("What are you looking for?   ")
             recursiveBinarySearch(unique_list, 0, len(unique_list)-1, int(searchItem))
+        elif: choise == "9":
+            newrandom()
         else:
-            break
+             break
 def addToList():
     print("Adding to a list! Great choise!")
     newItem = input("Type an interger here!    ")
